@@ -29,7 +29,7 @@ Code for the paper: "Sentence Specified Dynamic Video Thumbnail Generation", imp
 	* 'Consistency': The consistency (0~1) between different annotations. Higher value means that different annotations are consistent with each other, and the annotators reach a consensus towards the video thumbnail selection.
 
 
-## src
+## Model implementation
 * Code for data processing, model construction, and model training and testing.
 
 #### ./src/data_prepare/generate_batch_data.py
