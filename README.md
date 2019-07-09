@@ -3,7 +3,7 @@ by Yitian Yuan, Lin Ma and Wenwu Zhu
 
 ## Introduction
 
-![](https://github.com/yytzsy/GTP/blob/master/intro.PNG)
+![](https://github.com/yytzsy/GTP/blob/master/intro_model.PNG)
 
 ## Dataset
 
