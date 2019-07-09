@@ -12,7 +12,7 @@ Sentence specified dynamic video thumbnail generation aims to dynamically select
 The 'dataset' folder contains the annotated dataset for sentence specified dynamic video thumbnail generation, as well as other auxiliary data. Concrete annotation process for the dataset can be found in our paper.
 
 #### ./dataset/glove.840B.300d_dict.npy
-* Glove word embeddings in our work, the original features can be downloaded at: https://nlp.stanford.edu/projects/glove/.
+* Glove word embeddings in our work, please download the file [glove.840B.300d_dict.npy](http://nlp.stanford.edu/data/glove.840B.300d.zip) in this folder. 
 
 #### ./dataset/activitynet: ActivityNet Captions data
 * (1) train.json: Video caption training annotations from the ActivityNet Captions dataset
