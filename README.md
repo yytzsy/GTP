@@ -29,6 +29,30 @@ Code for the paper: "Sentence Specified Dynamic Video Thumbnail Generation", imp
 	* 'Consistency': The consistency (0~1) between different annotations. Higher value means that different annotations are consistent with each other, and the annotators reach a consensus towards the video thumbnail selection.
 
 
+## src
+* Code for data processing, model construction, and model training and testing.
+
+#### ./src/data_prepare/generate_batch_data.py
+* Data preprocessing for model training, testing and validation.  If run
+```
+python generate_batch_data.py
+```
+A folder './data' will be constructed. Three subdirs are in this folder, which contain the train, test, and validation h5py files, respectively. 
+
+#### GTP GTP_C GTP_G GTP_P
+* The GTP model as well as its variants implementation. Please see the paper for details.
+* Model training:
+```
+python run_GTP.py --task train
+```
+* Model testing:
+```
+python run_GTP.py --task test
+```
+
+
+
+
 
 
 
