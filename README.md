@@ -3,7 +3,7 @@ Code for the paper: "Sentence Specified Dynamic Video Thumbnail Generation", imp
 
 ## Dataset
 
-* The 'dataset' folder contains the annotated dataset for sentence specified dynamic video thumbnail generation, as well as other auxiliary data. Concrete annotation process for the dataset can be found in our paper.
+The 'dataset' folder contains the annotated dataset for sentence specified dynamic video thumbnail generation, as well as other auxiliary data. Concrete annotation process for the dataset can be found in our paper.
 
 #### ./dataset/glove.840B.300d_dict.npy
 * Glove word embeddings in our work, the original features can be downloaded at: https://nlp.stanford.edu/projects/glove/.
@@ -30,7 +30,7 @@ Code for the paper: "Sentence Specified Dynamic Video Thumbnail Generation", imp
 
 
 ## Model implementation
-* Code for data processing, model construction, and model training and testing.
+Code for data processing, model construction, and model training and testing.
 
 #### ./src/data_prepare/generate_batch_data.py
 * Data preprocessing for model training, testing and validation.  If run
