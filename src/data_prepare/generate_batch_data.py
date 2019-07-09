@@ -132,7 +132,7 @@ def generate_h5py(lines,split_type):
         choose_label_list.append(choose_label)
         mean_choose_label_list.append(mean_choose_label)
 
-        if len(video_name_list) == batch_size or current_line_num == len(lines)-1:
+        if len(video_name_list) == batch_size #or current_line_num == len(lines)-1:
             save_batch_h5py(data_save_dir,split_type,batch_id,video_name_list,seg_list,sentence_list,video_data_list,video_label_list,choose_label_list,mean_choose_label_list)
             video_name_list = []
             seg_list = []
