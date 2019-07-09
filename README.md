@@ -39,7 +39,7 @@ python generate_batch_data.py
 ```
 A folder './data' will be constructed. Three subdirs are in this folder, which contain the train, test, and validation h5py files, respectively. 
 
-#### GTP GTP_C GTP_G GTP_P
+#### ./src/GTP (GTP_C, GTP_G, GTP_P)
 * The GTP model as well as its variants implementation. Please see the paper for details.
 * Model training:
 ```
