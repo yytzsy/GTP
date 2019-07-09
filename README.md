@@ -59,7 +59,15 @@ python run_GTP.py --task train
 python run_GTP.py --task test
 ```
 
-
+## Citation
+```
+@inproceedings{videoThumbnailGTP,
+  title={Sentence Specified Dynamic Video Thumbnail Generation},
+  author={Yitian Yuan, Lin Ma and Wenwu Zhu},
+  booktitle={Proceedings of the 2019 ACM on Multimedia Conference},
+  year={2019},
+}
+```
 
 
 
