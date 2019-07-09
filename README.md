@@ -30,6 +30,9 @@ The 'dataset' folder contains the annotated dataset for sentence specified dynam
 	* 'Video thumbnail annotations': Video thumbnail annotations for the 'Trimmed video segment' based on the 'Video caption'. There are several annotations from different annotators. For example, '[[1, 2, 4, 5, 7], [10, 11, 12], [2, 3, 4, 5, 6], [4, 5, 6, 7, 9]]' means there are 4 annotations. The first annotation '[1, 2, 4, 5, 7]' means that 5 short clips are selected to compose the video thumbnail for the trimmed video segment. The 5 short clips are located at 0-2s, 2-4s, 6-8s, 8-10s, 12-14s in the trimmed video segment.
 	* 'Consistency': The consistency (0~1) between different annotations. Higher value means that different annotations are consistent with each other, and the annotators reach a consensus towards the video thumbnail selection.
 
+### Other auxiliary data
+* ActivityNet Captions dataset: https://cs.stanford.edu/people/ranjaykrishna/densevid/
+* ActivityNet features: http://activity-net.org/challenges/2016/download.html
 
 ## Model implementation
 Code for data processing, model construction, and model training and testing.
