@@ -1,7 +1,9 @@
 # Sentence Specified Dynamic Video Thumbnail Generation
 by Yitian Yuan, Lin Ma and Wenwu Zhu
 
-Code and dataset for the paper: "Sentence Specified Dynamic Video Thumbnail Generation", implemented with tensorflow.
+## Introduction
+
+![]()
 
 ## Dataset
 
