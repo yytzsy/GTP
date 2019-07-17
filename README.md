@@ -5,7 +5,7 @@ by Yitian Yuan, Lin Ma and Wenwu Zhu
 
 Sentence specified dynamic video thumbnail generation aims to dynamically select and concatenate video clips from an original video to generate one video thumbnail, which not only provides a concise preview of the original video but also semantically corresponds to the given sentence description.
 
-![](https://github.com/yytzsy/GTP/blob/master/intro.pdf)
+![](https://github.com/yytzsy/GTP/blob/master/intro.PNG)
 
 ## Dataset
 
@@ -41,7 +41,7 @@ The 'dataset' folder contains the annotated dataset for sentence specified dynam
 ## Model implementation
 Code for data processing, model construction, and model training and testing.
 
-![](https://github.com/yytzsy/GTP/blob/master/model.pdf)
+![](https://github.com/yytzsy/GTP/blob/master/model.PNG)
 
 #### ./src/data_prepare/generate_batch_data.py
 * Data preprocessing for model training, testing and validation.  If run
