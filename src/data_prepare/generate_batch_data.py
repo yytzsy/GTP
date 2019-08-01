@@ -22,11 +22,15 @@ all_c3d_fts = h5py.File(feature_path_c3d)
 train_anno_file = open('../../dataset/annotated_thumbnail/anno_train.txt','r')
 test_anno_file = open('../../dataset/annotated_thumbnail/anno_test.txt','r')
 val_anno_file = open('../../dataset/annotated_thumbnail/anno_val.txt','r')
+
 train_lines = train_anno_file.readlines()
 test_lines = test_anno_file.readlines()
 val_lines = val_anno_file.readlines()
 
 remain_file = open('./remain.txt','w')
+filtered_train_anno_file = open('../../dataset/annotated_thumbnail/filtered_anno_train.txt','w')
+filtered_test_anno_file = open('../../dataset/annotated_thumbnail/filtered_anno_test.txt','w')
+filtered_val_anno_file = open('../../dataset/annotated_thumbnail/filtered_anno_val.txt','w')
 
 
 def get_annoSegFts(video_name,seg,c3d_per_f):
@@ -80,7 +84,7 @@ def save_batch_h5py(data_save_dir,split_type,batch_id,video_name_list,seg_list,s
 
 
 #video_name, seg, video_data, choose_label_list, mean_choose_label, sentence
-def generate_h5py(lines,split_type):
+def generate_h5py(lines,split_type,filtered_file):
     print split_type
     video_name_list = []
     seg_list = []
@@ -132,7 +136,7 @@ def generate_h5py(lines,split_type):
         choose_label_list.append(choose_label)
         mean_choose_label_list.append(mean_choose_label)
 
-        if len(video_name_list) == batch_size #or current_line_num == len(lines)-1:
+        if len(video_name_list) == batch_size or current_line_num == len(lines)-1:
             save_batch_h5py(data_save_dir,split_type,batch_id,video_name_list,seg_list,sentence_list,video_data_list,video_label_list,choose_label_list,mean_choose_label_list)
             video_name_list = []
             seg_list = []
@@ -145,6 +149,7 @@ def generate_h5py(lines,split_type):
 
         current_line_num += 1
         remain_file.write(line)
+        filtered_file.write(line)
 
 
 
@@ -159,9 +164,9 @@ def getlist(feature_folder_name,split):
                 continue
         f.write(ele+'\n')
 
-generate_h5py(train_lines,'train')
-generate_h5py(test_lines,'test')
-generate_h5py(val_lines,'val')
+generate_h5py(train_lines,'train',filtered_train_anno_file)
+generate_h5py(test_lines,'test',filtered_test_anno_file)
+generate_h5py(val_lines,'val',filtered_val_anno_file)
 getlist(os.path.abspath(data_save_dir),'train')
 getlist(os.path.abspath(data_save_dir),'test')
 getlist(os.path.abspath(data_save_dir),'val')
